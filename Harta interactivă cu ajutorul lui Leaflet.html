@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<title>Harta interactivă cu ajutorul lui Leaflet</title>
+<meta charset="utf-8">
+<style>
+#map {position:absolute; top: 0; bottom: 0; left: 0; right: 0;}
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>//script-ul pentru municipiul Râmnicu Vâlcea, județul Vâlcea, România
+var map=L.map('map').setView([45.0318, 23.725], 9);
+
+var coord_x=[45.1083, 44.6612, 45.0887, 45.1453, 45.1011, 45.1172, 45.1606, 45.117,45.3764, 45.2597,45.2597,45.4382,45.2597,45.2089,44.6203]
+var coord_y=[24.3636, 24.2571, 24.2971, 23.9911, 24.3976, 24.4593, 24.0666, 24.45, 23.6504,24.3233,24.3233,23.6289,24.3240,24.2390,23.9378]
+
+
+L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=I2psJszvIpvX9dX5mzuO',{
+attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+}).addTo(map);
+var marker = L.marker([coord_x[0], coord_y[0]]).addTo(map);
+marker.bindPopup("<b><br>Biserica Cetățuia</b><br/>Râmnicu Vâlcea").openPopup();
+ marker=L.marker([coord_x[1], coord_y[1]]).addTo(map);
+marker.bindPopup("<b>Muzeul Podgoriei</b><br/>Drăgășani").openPopup(); marker=L.marker([coord_x[2], coord_y[2]]).addTo(map);
+marker.bindPopup("<b>Parcul Național Cozia</b><br/>Ocnele Mari").openPopup();
+ marker=L.marker([coord_x[3], coord_y[3]]).addTo(map);
+marker.bindPopup("<b>Ceramica de Horezu</b><br/>Horezu").openPopup();
+ marker=L.marker([coord_x[4], coord_y[4]]).addTo(map);
+marker.bindPopup("<b>Piramidele de la Goranu</b><br/>Goranu").openPopup();
+ marker=L.marker([coord_x[5], coord_y[5]]).addTo(map);
+marker.bindPopup("<b>Biserica Sfântul Nicolae din Vătășești-Țănculești</b><br/>Golești").openPopup();
+marker=L.marker([coord_x[6], coord_y[6]]).addTo(map);
+marker.bindPopup("<b>Muzeul Trovanților</b><br/>Costești").openPopup();
+marker=L.marker([coord_x[7], coord_y[7]]).addTo(map);
+marker.bindPopup("<b>Muzeul Memorial Nicolae Bălcescu</b><br/>Nicolae Bălcescu").openPopup();
+marker=L.marker([coord_x[8], coord_y[8]]).addTo(map);
+marker.bindPopup("<b>Drumul turistic din județul Vâlcea</b><br/>Transalpina").openPopup();
+marker=L.marker([coord_x[9], coord_y[9]]).addTo(map);
+marker.bindPopup("<b>Plimbarea cu vaporul pe râul Olt</b><br/>Căciulata").openPopup();
+marker=L.marker([coord_x[10], coord_y[10]]).addTo(map);
+marker.bindPopup("<b>Muzeul Satului</b><br/>Bujoreni").openPopup();
+marker=L.marker([coord_x[11], coord_y[11]]).addTo(map);
+marker.bindPopup("<b>Pârtie de schi Voineasa</b><br/>Obârșia Lotrului").openPopup();
+marker=L.marker([coord_x[12], coord_y[12]]).addTo(map);
+marker.bindPopup("<b>Mănăstirea Cozia</b><br/>Căciulata").openPopup();
+marker=L.marker([coord_x[13], coord_y[13]]).addTo(map);
+marker.bindPopup("<b>Biserica Sfântul Pantelimon</b><br/>Băile Olănești").openPopup();
+marker=L.marker([coord_x[14], coord_y[14]]).addTo(map);
+marker.bindPopup("<b>Biserica veche din Bălcești</b><br/>Bălcești").openPopup();
+</script>
+</body>
+</html>
+
